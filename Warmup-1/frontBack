@@ -1,0 +1,16 @@
+Given a string, return a new string where the first and last chars have been exchanged.
+
+frontBack("code") → "eodc"
+frontBack("a") → "a"
+frontBack("ab") → "ba"
+
+public String frontBack(String str) {
+
+  int myLength = str.length();
+
+  if (myLength <= 1) {
+    return str;
+  }
+  return str.substring(myLength - 1) + str.substring(1, myLength - 1) + str.substring(0, 1);
+
+}
