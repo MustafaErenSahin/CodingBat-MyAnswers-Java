@@ -10,7 +10,7 @@ public boolean stringE(String str) {
 
   for (char a : str.toCharArray()) {
     if (a == 'e') {
-      total ++;
+      total++;
     }
   }
 
