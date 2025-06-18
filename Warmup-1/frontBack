@@ -11,6 +11,6 @@ public String frontBack(String str) {
   if (myLength <= 1) {
     return str;
   }
-  return str.substring(myLength - 1) + str.substring(1, myLength - 1) + str.substring(0, 1);
+  return str.charAt(myLength - 1) + str.substring(1, myLength - 1) + str.charAt(0);
 
 }

@@ -6,14 +6,7 @@ front3("abc") → "abcabcabc"
 
 public String front3(String str) {
 
-  String truncated;
-
-  if (str.length() <= 3) {
-    truncated = str.substring(0);
-  }
-  else {
-    truncated = str.substring(0, 3);
-  }
+  String truncated = str.substring(0, Math.min(3, str.length()));
 
   return truncated + truncated + truncated;
 

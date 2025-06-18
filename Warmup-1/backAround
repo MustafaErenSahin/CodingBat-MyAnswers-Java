@@ -6,7 +6,7 @@ backAround("a") → "aaa"
 
 public String backAround(String str) {
 
-  String lastChar = str.substring(str.length() - 1);
+  char lastChar = str.charAt(str.length() - 1);
 
   return lastChar + str + lastChar;
 
