@@ -1,0 +1,19 @@
+Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
+
+withouEnd2("Hello") → "ell"
+withouEnd2("abc") → "b"
+withouEnd2("ab") → ""
+
+public String withouEnd2(String str) {
+
+  int myLength = str.length();
+
+  if (myLength < 2) {
+    return "";
+  }
+  return str.substring(1, myLength - 1);
+
+/*return str.substring((Math.min(1, myLength)), Math.max(
+Math.min(1, myLength), Math.max(0, myLength - 1)));*/
+
+}
