@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CodingBat-MyAnswers.iml" filepath="$PROJECT_DIR$/.idea/CodingBat-MyAnswers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CodingBat-MyAnswers-Java.iml" filepath="$PROJECT_DIR$/.idea/CodingBat-MyAnswers-Java.iml" />
     </modules>
   </component>
 </project>
