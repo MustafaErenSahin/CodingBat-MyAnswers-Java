@@ -8,6 +8,6 @@ public boolean frontAgain(String str) {
 
   int myLength = str.length();
 
-  return myLength >= 2 && str.substring(0, 2).equals(str.substring(myLength - 2));
+  return myLength >= 2 && str.startsWith(str.substring(myLength - 2));
 
 }
