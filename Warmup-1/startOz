@@ -8,8 +8,12 @@ public String startOz(String str) {
 
   String myString = "";
 
-  if (str.startsWith("o")) myString += "o";
-  if (str.startsWith("z", 1)) myString += "z";
+  if (str.startsWith("o")) {
+    myString += "o";
+  }
+  if (str.startsWith("z", 1)) {
+    myString += "z";
+  }
 
   return myString;
 
