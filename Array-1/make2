@@ -6,14 +6,18 @@ make2([], [1, 2]) → [1, 2]
 
 public int[] make2(int[] a, int[] b) {
 
-  int aLength = a.length;
+  int aLength =  a.length;
+  int[] output = new int[2];
 
-  if (aLength == 0) {
-    return new int[] {b[0], b[1]};
+  for (int i = 0; i < 2; i++) {
+    if (aLength > i) {
+      output[i] = a[i];
+    }
+    else {
+      output[i] = b[i - aLength];
+    }
   }
-  if (aLength == 1) {
-    return new int[] {a[0], b[0]};
-  }
-  return new int[] {a[0], a[1]};
+
+  return output;
 
 }
