@@ -7,11 +7,12 @@ endUp("hi") → "HI"
 public String endUp(String str) {
 
   int myLength = str.length();
+  String output = str.toUpperCase();
 
-  if (myLength <= 3) {
-    return str.toUpperCase();
+  if (myLength >= 3) {
+    output = str.substring(0, myLength - 3) + str.substring(myLength - 3).toUpperCase();
   }
 
-  return str.substring(0, myLength - 3) + str.substring(myLength - 3).toUpperCase();
+  return output;
 
 }
