@@ -6,14 +6,13 @@ alarmClock(0, false) → "10:00"
 
 public String alarmClock(int day, boolean vacation) {
 
-  String result = "off";
+  String result = "10:00";
 
   if (day > 0 && day < 6 && !vacation) {
     result = "7:00";
   }
-  else if ((day == 0 || day == 6) && !vacation ||
-           day > 0 && day < 6 && vacation) {
-    result = "10:00";
+  else if ((day == 0 || day == 6) && vacation) {
+    result = "off";
   }
 
   return result;
