@@ -7,10 +7,9 @@ noTriples([1, 1, 1, 2, 2, 2, 1]) → false
 public boolean noTriples(int[] nums) {
 
   boolean output = true;
-  int temp = 0;
 
   for (int i = 0; i < nums.length - 2; i++) {
-    temp = nums[i];
+    int temp = nums[i];
     if (nums[i + 1] == temp && nums[i + 2] == temp) {
       output = false;
       break;
