@@ -8,8 +8,9 @@ public int withoutDoubles(int die1, int die2, boolean noDoubles) {
 
   int sum = die1 + die2;
 
-  if (noDoubles && die1 == die2 && ++sum == 13)
+  if (noDoubles && die1 == die2 && ++sum == 13) {
     sum = 7;
+  }
 
   return sum;
 
