@@ -6,9 +6,12 @@ theEnd("oh", true) → "o"
 
 public String theEnd(String str, boolean front) {
 
-  if (front) {
-    return "" + str.charAt(0);
+  String output = "" + str.charAt(0);
+
+  if (!front) {
+    output = "" + str.charAt(str.length() - 1);
   }
-  return "" + str.charAt(str.length() - 1);
+
+  return output;
 
 }

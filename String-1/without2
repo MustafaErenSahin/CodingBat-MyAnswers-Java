@@ -7,10 +7,12 @@ without2("Hi") → ""
 public String without2(String str) {
 
   int myLength = str.length();
+  String output = str;
 
   if (myLength >= 2 && str.startsWith(str.substring(myLength - 2))) {
-    return str.substring(2);
+    output = str.substring(2);
   }
-  return str;
+
+  return output;
 
 }

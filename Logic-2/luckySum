@@ -7,15 +7,13 @@ luckySum(1, 13, 3) → 1
 public int luckySum(int a, int b, int c) {
 
   int sum = 0;
+  int[] helper = new int[] {a, b, c};
 
-  if (a != 13) {
-    sum += a;
-      if (b != 13) {
-        sum += b;
-          if (c != 13) {
-            sum += c;
-          }
-      }
+  for (int i : helper) {
+    if (i == 13) {
+      break;
+    }
+    sum += i;
   }
 
   return sum;

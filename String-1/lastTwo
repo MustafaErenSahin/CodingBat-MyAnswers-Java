@@ -7,11 +7,13 @@ lastTwo("ab") → "ba"
 public String lastTwo(String str) {
 
   int myLength = str.length();
+  String output = str;
 
-  if (myLength < 2) {
-    return str;
+  if (myLength >= 2) {
+    output = str.substring(0, myLength - 2) + str.charAt(myLength - 1) +
+             str.charAt(myLength - 2);
   }
 
-  return str.substring(0, myLength - 2) + str.charAt(myLength - 1) + str.charAt(myLength - 2);
+  return output;
 
 }
