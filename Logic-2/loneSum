@@ -6,17 +6,17 @@ loneSum(3, 3, 3) → 0
 
 public int loneSum(int a, int b, int c) {
 
-  int sum = 0;
-  boolean ab = a != b, bc = b != c, ac = a != c;
+  int sum = 0 , prev = 0;
+  int[] helper = new int[] {0, a, b, c, 0 };
 
-  if (ab && ac) {
-    sum += a;
-  }
-  if (ab && bc) {
-    sum += b;
-  }
-  if (ac && bc) {
-    sum += c;
+  Arrays.sort(helper, 1, 4);
+
+  for (int i = 1; i < 4; i++) {
+    int current = helper[i];
+    if (current == helper[i + 1] || current == helper[i - 1]) {
+      continue;
+    }
+    sum += current;
   }
 
   return sum;
