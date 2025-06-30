@@ -8,7 +8,7 @@ public boolean catDog(String str) {
 
   int count = 0;
 
-  for (int i = 0; i < str.length(); i++) {
+  for (int i = 0; i < str.length() - 2; i++) {
     if (str.startsWith("cat", i)) {
       count++; i += 2;
       continue;
