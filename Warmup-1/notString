@@ -6,12 +6,12 @@ notString("not bad") → "not bad"
 
 public String notString(String str) {
 
-  String output = str;
+  StringBuilder sb = new StringBuilder(str);
 
   if (!str.startsWith("not")) {
-    output = "not " + output;
+    sb.insert(0, "not ");
   }
 
-  return output;
+  return sb.toString();
 
 }

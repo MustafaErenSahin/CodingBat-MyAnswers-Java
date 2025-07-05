@@ -6,12 +6,12 @@ delDel("adedbc") → "adedbc"
 
 public String delDel(String str) {
 
-  String output = str;
+  StringBuilder output = new StringBuilder(str);
 
   if (str.startsWith("del", 1)) {
-    output = str.substring(0, 1) + str.substring(4);
+    output.delete(1, 4);
   }
 
-  return output;
+  return output.toString();
 
 }
