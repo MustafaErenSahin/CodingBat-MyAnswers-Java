@@ -6,6 +6,7 @@ nTwice("Chocolate", 1) → "Ce"
 
 public String nTwice(String str, int n) {
 
-  return str.substring(0, n) + str.substring(str.length() - n);
+  return new StringBuilder().append(str.substring(0, n)).append(str.substring
+         (str.length() - n)).toString();
 
 }

@@ -8,6 +8,7 @@ public String front22(String str) {
 
   String truncated = str.substring(0, Math.min(2, str.length()));
 
-  return truncated + str + truncated;
+  return new StringBuilder().append(truncated).append(str).append(truncated)
+         .toString();
 
 }

@@ -6,6 +6,6 @@ helloName("X") → "Hello X!"
 
 public String helloName(String name) {
 
-  return "Hello " + name + "!";
+  return new StringBuilder().append("Hello ").append(name).append("!").toString();
 
 }

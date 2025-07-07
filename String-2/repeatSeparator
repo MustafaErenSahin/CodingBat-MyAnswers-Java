@@ -7,14 +7,13 @@ repeatSeparator("This", "And", 1) → "This"
 public String repeatSeparator(String word, String sep, int count) {
 
   StringBuilder output = new StringBuilder();
-  String temp = sep + word;
 
   if (count > 0) {
     output.append(word);
   }
 
   for (int i = count - 1; i > 0; i--) {
-    output.append(temp);
+    output.append(sep).append(word);
   }
 
   return output.toString();

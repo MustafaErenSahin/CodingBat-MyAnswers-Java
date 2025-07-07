@@ -6,12 +6,12 @@ altPairs("CodingHorror") → "Congrr"
 
 public String altPairs(String str) {
 
-  String output = "";
+  StringBuilder output = new StringBuilder();
 
   for (int i = 0; i < str.length(); i += 4) {
-    output += str.substring(i, Math.min(i + 2, str.length()));
+    output.append(str.substring(i, Math.min(i + 2, str.length())));
   }
 
-  return output;
+  return output.toString();
 
 }

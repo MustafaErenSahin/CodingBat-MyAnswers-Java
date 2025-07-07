@@ -6,15 +6,15 @@ deFront("away") → "aay"
 
 public String deFront(String str) {
 
-  String truncated = "";
+  StringBuilder output = new StringBuilder();
 
   if (str.startsWith("a")) {
-    truncated += "a";
+    output.append("a");
   }
   if (str.startsWith("b", 1)) {
-    truncated += "b";
+    output.append("b");
   }
 
-  return truncated += str.substring(2);
+  return output.append(str.substring(2)).toString();
 
 }

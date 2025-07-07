@@ -6,19 +6,18 @@ fizzString2(3) → "Fizz!"
 
 public String fizzString2(int n) {
 
-  String output = "" + n;
-  String temp = "";
+  StringBuilder output = new StringBuilder(String.valueOf(n));
+  StringBuilder temp = new StringBuilder();
 
   if (n % 3 == 0) {
-    temp = "Fizz";
+    temp.append("Fizz");
     output = temp;
   }
   if (n % 5 == 0) {
-    temp += "Buzz";
+    temp.append("Buzz");
     output = temp;
   }
-  output += "!";
 
-  return output;
+  return output.append("!").toString();
 
 }

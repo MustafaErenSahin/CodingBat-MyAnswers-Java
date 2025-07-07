@@ -6,15 +6,15 @@ startOz("oxx") → "o"
 
 public String startOz(String str) {
 
-  String myString = "";
+  StringBuilder output = new StringBuilder();
 
   if (str.startsWith("o")) {
-    myString += "o";
+    output.append("o");
   }
   if (str.startsWith("z", 1)) {
-    myString += "z";
+    output.append("z");
   }
 
-  return myString;
+  return output.toString();
 
 }

@@ -6,6 +6,7 @@ makeTags("cite", "Yay") → "<cite>Yay</cite>"
 
 public String makeTags(String tag, String word) {
 
-  return "<" + tag + ">" + word + "</" + tag + ">";
+  return new StringBuilder().append("<").append(tag).append(">").append(word)
+         .append("</").append(tag).append(">").toString();
 
 }

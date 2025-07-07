@@ -6,12 +6,15 @@ conCat("abc", "") → "abc"
 
 public String conCat(String a, String b) {
 
-  String output = a + b;
+  StringBuilder output = new StringBuilder(a);
 
   if (!a.isEmpty() && !b.isEmpty() && a.charAt(a.length() - 1) == b.charAt(0)) {
-    output = a + b.substring(1);
+    output.append(b.substring(1));
+  }
+  else {
+    output.append(b);
   }
 
-  return output;
+  return output.toString();
 
 }

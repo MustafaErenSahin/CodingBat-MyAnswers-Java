@@ -10,6 +10,7 @@ public String minCat(String a, String b) {
   int bLength = b.length();
   int minLength = Math.min(aLength, bLength);
 
-  return a.substring(aLength - minLength) + b.substring(bLength - minLength);
+  return new StringBuilder().append(a.substring(aLength - minLength)).append
+         (b.substring(bLength - minLength)).toString();
 
 }

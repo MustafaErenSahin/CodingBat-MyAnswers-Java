@@ -6,6 +6,7 @@ makeOutWord("[[]]", "word") → "[[word]]"
 
 public String makeOutWord(String out, String word) {
 
-  return out.substring(0, 2) + word + out.substring(2);
+  return new StringBuilder().append(out.substring(0, 2)).append(word).append
+         (out.substring(2)).toString();
 
 }

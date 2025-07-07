@@ -7,15 +7,15 @@ fizzString("fib") → "FizzBuzz"
 public String fizzString(String str) {
 
   String output = str;
-  String temp = "";
+  StringBuilder temp = new StringBuilder();
 
   if (str.startsWith("f")) {
-    temp = "Fizz";
-    output = temp;
+    temp.append("Fizz");
+    output = temp.toString();
   }
   if (str.endsWith("b")) {
-    temp += "Buzz";
-    output = temp;
+    temp.append("Buzz");
+    output = temp.toString();
   }
 
   return output;

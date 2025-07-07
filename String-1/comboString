@@ -12,6 +12,6 @@ public String comboString(String a, String b) {
     b = temp;
   }
 
-  return a + b + a;
+  return new StringBuilder().append(a).append(b).append(a).toString();
 
 }
