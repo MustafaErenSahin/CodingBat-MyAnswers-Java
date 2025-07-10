@@ -8,6 +8,6 @@ public String extraEnd(String str) {
 
   String lastTwo = str.substring(str.length() - 2);
 
-  return new StringBuilder().append(lastTwo).append(lastTwo).append(lastTwo).toString();
+  return new StringBuilder(6).append(lastTwo).append(lastTwo).append(lastTwo).toString();
 
 }

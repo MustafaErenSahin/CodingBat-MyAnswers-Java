@@ -6,13 +6,16 @@ withoutX("Hxix") → "Hxi"
 
 public String withoutX(String str) {
 
-  if (str.startsWith("x")) {
-    str = str.substring(1);
+  int myLength = str.length();
+  StringBuilder output = new StringBuilder(str);
+
+  if (myLength > 0 && str.charAt(0) == 'x') {
+    output.deleteCharAt(0);
   }
-  if (str.endsWith("x")) {
-    str = str.substring(0, str.length() - 1);
+  if (myLength > 1 && str.charAt(myLength - 1) == 'x') {
+    output.deleteCharAt(output.length() - 1);
   }
 
-  return str;
+  return output.toString();
 
 }

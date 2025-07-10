@@ -8,7 +8,7 @@ public String right2(String str) {
 
   int myLength = str.length();
 
-  return new StringBuilder().append(str.substring(myLength - 2)).append
+  return new StringBuilder(myLength).append(str.substring(myLength - 2)).append
          (str.substring(0, myLength - 2)).toString();
 
 }

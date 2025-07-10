@@ -8,7 +8,7 @@ public String front3(String str) {
 
   String truncated = str.substring(0, Math.min(3, str.length()));
 
-  return new StringBuilder().append(truncated).append(truncated).append
-         (truncated).toString();
+  return new StringBuilder(9).append(truncated).append(truncated)
+         .append(truncated).toString();
 
 }

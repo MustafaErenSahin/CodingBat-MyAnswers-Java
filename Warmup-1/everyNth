@@ -6,9 +6,10 @@ everyNth("abcdefg", 3) → "adg"
 
 public String everyNth(String str, int n) {
 
-  StringBuilder output = new StringBuilder();
+  int myLength = str.length();
+  StringBuilder output = new StringBuilder((myLength + n - 1) / n);
 
-  for (int i = 0; i < str.length() ; i += n) {
+  for (int i = 0; i < myLength; i += n) {
     output.append(str.charAt(i));
   }
 

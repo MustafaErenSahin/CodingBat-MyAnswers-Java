@@ -6,13 +6,13 @@ deFront("away") → "aay"
 
 public String deFront(String str) {
 
-  StringBuilder output = new StringBuilder();
+  StringBuilder output = new StringBuilder(str.length());
 
-  if (str.startsWith("a")) {
-    output.append("a");
+  if (str.length() > 0 && str.charAt(0) == 'a') {
+    output.append('a');
   }
-  if (str.startsWith("b", 1)) {
-    output.append("b");
+  if (str.length() > 1 && str.charAt(1) == 'b') {
+    output.append('b');
   }
 
   return output.append(str.substring(2)).toString();

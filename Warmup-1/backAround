@@ -8,7 +8,7 @@ public String backAround(String str) {
 
   char lastChar = str.charAt(str.length() - 1);
 
-  return new StringBuilder().append(lastChar).append(str).append(lastChar)
-         .toString();
+  return new StringBuilder(str.length() + 2).append(lastChar).append(str)
+         .append(lastChar).toString();
 
 }

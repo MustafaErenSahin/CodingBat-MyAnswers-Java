@@ -8,13 +8,16 @@ public int close10(int a, int b) {
 
   int absA = Math.abs(10 - a);
   int absB = Math.abs(10 - b);
-  int output = 0;
+  int output;
 
   if (absA < absB) {
     output = a;
   }
   else if (absB < absA) {
     output = b;
+  }
+  else {
+    output = 0;
   }
 
   return output;

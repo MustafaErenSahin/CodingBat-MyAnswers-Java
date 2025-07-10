@@ -6,6 +6,7 @@ makeAbba("What", "Up") → "WhatUpUpWhat"
 
 public String makeAbba(String a, String b) {
 
-  return new StringBuilder().append(a).append(b).append(b).append(a).toString();
+  return new StringBuilder(2 * (a.length() + b.length())).append(a).append(b).append(b)
+         .append(a).toString();
 
 }

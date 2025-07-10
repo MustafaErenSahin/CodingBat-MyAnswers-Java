@@ -6,7 +6,7 @@ left2("Hi") → "Hi"
 
 public String left2(String str) {
 
-  return new StringBuilder().append(str.substring(2)).append(str.substring(0, 2))
-         .toString();
+  return new StringBuilder(str.length()).append(str.substring(2)).append(str.substring
+         (0, 2)).toString();
 
 }

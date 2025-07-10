@@ -8,7 +8,7 @@ public String extraFront(String str) {
 
   String firstTwo = str.substring(0, Math.min(2, str.length()));
 
-  return new StringBuilder().append(firstTwo).append(firstTwo).append(firstTwo)
+  return new StringBuilder(6).append(firstTwo).append(firstTwo).append(firstTwo)
          .toString();
 
 }

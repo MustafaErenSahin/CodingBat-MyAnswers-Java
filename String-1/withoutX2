@@ -6,13 +6,16 @@ withoutX2("Hi") → "Hi"
 
 public String withoutX2(String str) {
 
-  if (str.startsWith("x", 1)) {
-    str = str.charAt(0) + str.substring(2);
+  int myLength = str.length();
+  StringBuilder output = new StringBuilder(str);
+
+  if (myLength > 1 && str.charAt(1) == 'x') {
+    output.deleteCharAt(1);
   }
-  if (str.startsWith("x")) {
-    str = str.substring(1);
+  if (myLength > 0 && str.charAt(0) == 'x') {
+    output.deleteCharAt(0);
   }
 
-  return str;
+  return output.toString();
 
 }

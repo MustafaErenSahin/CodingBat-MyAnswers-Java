@@ -7,11 +7,11 @@ frontBack("ab") → "ba"
 public String frontBack(String str) {
 
   int myLength = str.length();
-  StringBuilder output = new StringBuilder();
+  StringBuilder output = new StringBuilder(myLength);
 
   if (myLength > 1) {
     output.append(str.charAt(myLength - 1)).append(str.substring
-                  (1, myLength - 1)).append(str.charAt(0));
+           (1, myLength - 1)).append(str.charAt(0));
   }
   else {
     output.append(str);

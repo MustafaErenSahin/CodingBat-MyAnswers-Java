@@ -6,9 +6,10 @@ front22("abc") → "ababcab"
 
 public String front22(String str) {
 
-  String truncated = str.substring(0, Math.min(2, str.length()));
+  int myLength = str.length();
+  String truncated = str.substring(0, Math.min(2, myLength));
 
-  return new StringBuilder().append(truncated).append(str).append(truncated)
+  return new StringBuilder(myLength + 4).append(truncated).append(str).append(truncated)
          .toString();
 
 }
