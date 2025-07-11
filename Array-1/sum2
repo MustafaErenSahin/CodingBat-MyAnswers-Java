@@ -6,8 +6,19 @@ sum2([1, 1, 1, 1]) → 2
 
 public int sum2(int[] nums) {
 
-  int[] temp = Arrays.copyOf(nums, 2);
+  int myLength = nums.length;
+  int output;
 
-  return temp[0] + temp[1];
+  if (myLength == 1) {
+    output = nums[0];
+  }
+  else if (myLength >= 2) {
+    output = nums[0] + nums[1];
+  }
+  else {
+    output = 0;
+  }
+
+  return output;
 
 }

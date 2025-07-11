@@ -8,8 +8,7 @@ public boolean unlucky1(int[] nums) {
 
   int myLength = nums.length;
 
-  return myLength >= 2 &&
-         (nums[0] == 1 && nums[1] == 3 ||
+  return myLength >= 2 && (nums[0] == 1 && nums[1] == 3 ||
          nums[1] == 1 && nums[2] == 3 ||
          nums[myLength - 2] == 1 && nums[myLength - 1] == 3);
 

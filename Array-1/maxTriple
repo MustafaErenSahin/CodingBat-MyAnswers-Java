@@ -7,7 +7,15 @@ maxTriple([5, 2, 3]) → 5
 public int maxTriple(int[] nums) {
 
   int myLength = nums.length;
+  int output;
 
-  return Math.max(nums[0], Math.max(nums[myLength / 2], nums[myLength - 1]));
+  if (myLength == 1) {
+    output = nums[0];
+  }
+  else {
+    output = Math.max(nums[0], Math.max(nums[myLength / 2], nums[myLength - 1]));
+  }
+
+  return output;
 
 }
