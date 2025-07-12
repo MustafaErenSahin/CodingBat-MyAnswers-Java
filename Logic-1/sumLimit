@@ -8,7 +8,7 @@ public int sumLimit(int a, int b) {
 
   int output = a + b;
 
-  if ((int)Math.log10(output) > (int)Math.log10(a)) {
+  if (String.valueOf(output).length() > String.valueOf(a).length()) {
     output = a;
   }
 
