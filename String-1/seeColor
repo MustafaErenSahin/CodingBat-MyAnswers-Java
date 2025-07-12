@@ -6,16 +6,13 @@ seeColor("blueTimes") → "blue"
 
 public String seeColor(String str) {
 
-  String output;
+  String output = "";
 
   if (str.startsWith("red")) {
     output = "red";
   }
   else if (str.startsWith("blue")) {
     output = "blue";
-  }
-  else {
-    output = "";
   }
 
   return output;

@@ -7,13 +7,10 @@ withouEnd2("ab") → ""
 public String withouEnd2(String str) {
 
   int myLength = str.length();
-  String output;
+  String output = "";
 
   if (myLength >= 2) {
     output = str.substring(1, myLength - 1);
-  }
-  else {
-    output = "";
   }
 
   return output;

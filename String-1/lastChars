@@ -6,22 +6,9 @@ lastChars("hi", "") → "h@"
 
 public String lastChars(String a, String b) {
 
-  StringBuilder output = new StringBuilder(2);
+  int myLength = a.length() + b.length() + 2;
 
-  if (a.isEmpty()) {
-    output.append('@');
-  }
-  else {
-    output.append(a.charAt(0));
-  }
-
-  if (b.isEmpty()) {
-    output.append('@');
-  }
-  else {
-    output.append(b.charAt(b.length() - 1));
-  }
-
-  return output.toString();
+  return new StringBuilder(myLength).append(a).append('@').append('@')
+         .append(b).delete(1, myLength - 1).toString();
 
 }

@@ -7,13 +7,10 @@ startWord("hippo", "i") → "h"
 public String startWord(String str, String word) {
 
   int wordLength = word.length();
-  String output;
+  String output = "";
 
   if (str.length() >= 1 && (str.startsWith(word.substring(1), 1) || wordLength == 1)) {
     output = str.substring(0, wordLength);
-  }
-  else {
-    output = "";
   }
 
   return output;

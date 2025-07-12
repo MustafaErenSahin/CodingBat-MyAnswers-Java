@@ -6,19 +6,6 @@ atFirst("h") → "h@"
 
 public String atFirst(String str) {
 
-  String output;
-  int myLength = str.length();
-
-  if (myLength >= 2) {
-    output = str.substring(0, 2);
-  }
-  else if (myLength == 1) {
-    output = new StringBuilder(str).append('@').toString();
-  }
-  else {
-    output = "@@";
-  }
-
-  return output;
+  return new StringBuilder(str).append("@@").substring(0, 2);
 
 }

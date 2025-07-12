@@ -6,16 +6,16 @@ fizzString2(3) → "Fizz!"
 
 public String fizzString2(int n) {
 
-  StringBuilder output = new StringBuilder(String.valueOf(n));
-  StringBuilder temp = new StringBuilder();
+  StringBuilder output = new StringBuilder(Math.max(9, String.valueOf(n).length() + 1));
 
   if (n % 3 == 0) {
-    temp.append("Fizz");
-    output = temp;
+    output.append("Fizz");
   }
   if (n % 5 == 0) {
-    temp.append("Buzz");
-    output = temp;
+    output.append("Buzz");
+  }
+  if (output.length() == 0) {
+    output.append(n);
   }
 
   return output.append("!").toString();
