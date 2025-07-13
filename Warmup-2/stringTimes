@@ -6,7 +6,7 @@ stringTimes("Hi", 1) → "Hi"
 
 public String stringTimes(String str, int n) {
 
-  StringBuilder output = new StringBuilder();
+  StringBuilder output = new StringBuilder(n * str.length());
 
   for (int i = 0; i < n; i++) {
     output.append(str);
