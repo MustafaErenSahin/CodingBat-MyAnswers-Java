@@ -11,9 +11,8 @@ public boolean catDog(String str) {
   for (int i = 0; i < str.length() - 2; i++) {
     if (str.startsWith("cat", i)) {
       count++; i += 2;
-      continue;
     }
-    if (str.startsWith("dog", i)) {
+    else if (str.startsWith("dog", i)) {
       count--; i += 2;
     }
   }

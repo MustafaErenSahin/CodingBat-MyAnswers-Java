@@ -8,7 +8,7 @@ public String mixString(String a, String b) {
 
   int aLength = a.length(), bLength = b.length();
   int minLength = Math.min(aLength, bLength);
-  StringBuilder output = new StringBuilder();
+  StringBuilder output = new StringBuilder(aLength + bLength);
 
   for (int i = 0; i < minLength; i++) {
     output.append(a.charAt(i)).append(b.charAt(i));

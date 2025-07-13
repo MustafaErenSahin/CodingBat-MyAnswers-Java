@@ -6,7 +6,7 @@ repeatFront("Ice Cream", 2) → "IcI"
 
 public String repeatFront(String str, int n) {
 
-  StringBuilder output = new StringBuilder();
+  StringBuilder output = new StringBuilder(n * (n + 1) / 2);
 
   for (int i = n; i > 0; i--) {
     output.append(str.substring(0, i));

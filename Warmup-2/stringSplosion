@@ -7,7 +7,7 @@ stringSplosion("ab") → "aab"
 public String stringSplosion(String str) {
 
   int myLength = str.length();
-  StringBuilder output = new StringBuilder((myLength ^ 2 + myLength) / 2);
+  StringBuilder output = new StringBuilder(myLength * (myLength + 1) / 2);
 
   for (int i = 1; i <= myLength; i++) {
     output.append(str.substring(0, i));

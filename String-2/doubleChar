@@ -6,10 +6,12 @@ doubleChar("Hi-There") → "HHii--TThheerree"
 
 public String doubleChar(String str) {
 
-  StringBuilder output = new StringBuilder();
+  int myLength = str.length();
+  StringBuilder output = new StringBuilder(2 * myLength);
 
-  for (char i : str.toCharArray()) {
-    output.append(i).append(i);
+  for (int i = 0; i < myLength; i++) {
+    char myChar = str.charAt(i);
+    output.append(myChar).append(myChar);
   }
 
   return output.toString();

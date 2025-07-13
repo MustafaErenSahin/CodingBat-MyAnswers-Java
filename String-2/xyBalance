@@ -6,8 +6,6 @@ xyBalance("yaaxbb") → false
 
 public boolean xyBalance(String str) {
 
-  int lastX = str.lastIndexOf('x');
-
-  return lastX == -1 || lastX < str.lastIndexOf('y');
+  return str.lastIndexOf('x') <= str.lastIndexOf('y');
 
 }
