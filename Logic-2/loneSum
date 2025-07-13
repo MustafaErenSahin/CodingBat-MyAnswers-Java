@@ -6,7 +6,7 @@ loneSum(3, 3, 3) → 0
 
 public int loneSum(int a, int b, int c) {
 
-  int sum = 0 , prev = 0;
+  int sum = 0;
   int[] helper = new int[] {0, a, b, c, 0 };
 
   Arrays.sort(helper, 1, 4);
