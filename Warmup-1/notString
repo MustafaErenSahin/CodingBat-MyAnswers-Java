@@ -5,13 +5,11 @@ notString("x") → "not x"
 notString("not bad") → "not bad"
 
 public String notString(String str) {
-
-  StringBuilder output = new StringBuilder(str);
-
-  if (!str.startsWith("not")) {
-    output.insert(0, "not ");
+  
+  if (str.startsWith("not")) {
+    return str;
   }
-
-  return output.toString();
-
+    
+  return "not " + str;
+  
 }
