@@ -5,16 +5,16 @@ startOz("bzoo") → "z"
 startOz("oxx") → "o"
 
 public String startOz(String str) {
-
-  StringBuilder output = new StringBuilder(2);
-
-  if (str.length() > 0 && str.charAt(0) == 'o') {
-    output.append('o');
+  
+  String output = "";
+  
+  if (str.startsWith("o")) {
+    output += "o";
   }
-  if (str.length() > 1 && str.charAt(1) == 'z') {
-    output.append('z');
+  if (str.startsWith("z", 1)) {
+    output += "z";
   }
-
-  return output.toString();
-
+  
+  return output;
+  
 }
