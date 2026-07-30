@@ -5,14 +5,15 @@ max1020(19, 11) → 19
 max1020(11, 9) → 11
 
 public int max1020(int a, int b) {
+  
+  return Math.max(between1020(a), between1020(b));
+  
+}
 
-  if (a > 20 || a < 10) {
-    a = 0;
-  }
-  if (b > 20 || b < 10) {
-    b = 0;
-  }
-
-  return Math.max(a, b);
-
+private int between1020(int x) {
+  
+  if (x < 10 || x > 20) return 0;
+  
+  return x;
+  
 }
