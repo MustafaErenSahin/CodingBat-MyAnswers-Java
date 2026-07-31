@@ -5,17 +5,17 @@ has271([1, 2, 8, 1]) → false
 has271([2, 7, 1]) → true
 
 public boolean has271(int[] nums) {
-
-  boolean output = false;
-
-  for (int i = 0; i < nums.length - 2; i++) {
+  
+  int myLength = nums.length - 2;
+  
+  for (int i = 0; i < myLength; i++) {
     int temp = nums[i];
+    
     if (nums[i + 1] - temp == 5 && Math.abs(nums[i+2] - (temp - 1)) <= 2) {
-      output = true;
-      break;
+      return true;
     }
   }
-
-  return output;
-
+  
+  return false;
+  
 }
