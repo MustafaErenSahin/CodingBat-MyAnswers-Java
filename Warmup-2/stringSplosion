@@ -5,14 +5,13 @@ stringSplosion("abc") → "aababc"
 stringSplosion("ab") → "aab"
 
 public String stringSplosion(String str) {
-
-  int myLength = str.length();
-  StringBuilder output = new StringBuilder(myLength * (myLength + 1) / 2);
-
-  for (int i = 1; i <= myLength; i++) {
-    output.append(str.substring(0, i));
+  
+  StringBuilder output = new StringBuilder(str.length() * (str.length() + 1) / 2);
+  
+  for (int i = 1; i <= str.length(); i++) {
+    output.append(str, 0, i);
   }
-
+  
   return output.toString();
-
+  
 }
