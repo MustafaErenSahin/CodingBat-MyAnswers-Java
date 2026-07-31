@@ -5,17 +5,13 @@ close10(13, 8) → 8
 close10(13, 7) → 0
 
 public int close10(int a, int b) {
-
-  int absA = Math.abs(10 - a), absB = Math.abs(10 - b);
-  int output = 0;
-
-  if (absA < absB) {
-    output = a;
-  }
-  else if (absB < absA) {
-    output = b;
-  }
-
-  return output;
-
+  
+  int absA = Math.abs(10 - a);
+  int absB = Math.abs(10 - b);
+  
+  if (absA < absB) return a;
+  if (absB < absA) return b;
+  
+  return 0;
+  
 }
