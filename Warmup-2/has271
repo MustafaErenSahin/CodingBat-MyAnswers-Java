@@ -11,7 +11,7 @@ public boolean has271(int[] nums) {
   for (int i = 0; i < myLength; i++) {
     int temp = nums[i];
     
-    if (nums[i + 1] - temp == 5 && Math.abs(nums[i+2] - (temp - 1)) <= 2) {
+    if (nums[i + 1] - temp == 5 && Math.abs(nums[i + 2] - (temp - 1)) <= 2) {
       return true;
     }
   }
