@@ -5,15 +5,11 @@ endUp("hi there") → "hi thERE"
 endUp("hi") → "HI"
 
 public String endUp(String str) {
-
-  int myLength = str.length();
-  StringBuilder output = new StringBuilder(str.substring(Math.max(0, myLength - 3))
-                         .toUpperCase());
-
-  if (myLength >= 3) {
-    output.insert(0, str.substring(0, myLength - 3));
-  }
-
-  return output.toString();
-
+  
+  if (str.length() <= 3) return str.toUpperCase();
+  
+  int cutIndex = str.length() - 3;
+  
+  return str.substring(0, cutIndex) + str.substring(cutIndex).toUpperCase();
+  
 }
