@@ -5,7 +5,16 @@ stringX("abxxxcd") → "abcd"
 stringX("xabxxxcdx") → "xabcdx"
 
 public String stringX(String str) {
-
-  return str.replaceAll("(?<=.)x(?=.)", "");
-
+  
+  if (str.length() <= 2) return str;
+  
+  StringBuilder temp = new StringBuilder(str.length()- 2);
+  
+  temp.append(str, 1, str.length() - 1);
+  
+  return str.charAt(0) + temp.toString().replace("x", "")
+    + str.charAt(str.length() - 1);
+    
+  //return str.replaceAll("(?<=.)x(?=.)", "");
+  
 }
