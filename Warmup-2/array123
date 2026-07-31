@@ -5,16 +5,13 @@ array123([1, 1, 2, 4, 1]) → false
 array123([1, 1, 2, 1, 2, 3]) → true
 
 public boolean array123(int[] nums) {
+  
+  int myLength = nums.length - 2;
 
-  boolean output = false;
-
-  for (int i = 0; i < nums.length - 2; i++) {
-    if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3) {
-      output = true;
-      break;
-    }
+  for (int i = 0; i < myLength; i++) {
+    if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3) return true;
   }
 
-  return output;
-
+  return false;
+  
 }
