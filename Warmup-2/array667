@@ -5,15 +5,16 @@ array667([6, 6, 2, 6]) → 1
 array667([6, 7, 2, 6]) → 1
 
 public int array667(int[] nums) {
-
+  
+  int myLength = nums.length - 1;
   int count = 0;
-
-  for (int i = 0; i < nums.length - 1; i++) {
+  
+  for (int i = 0; i < myLength; i++) {
     if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) {
       count++;
     }
   }
-
+  
   return count;
-
+  
 }
