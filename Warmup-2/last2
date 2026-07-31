@@ -5,17 +5,19 @@ last2("xaxxaxaxx") → 1
 last2("axxxaaxx") → 2
 
 public int last2(String str) {
-
-  int myLength = Math.max(0, str.length() - 2);
+  
+  if (str.length() < 2) return 0;
+  
+  int myLength = str.length() - 2;
   String temp = str.substring(myLength);
   int count = 0;
-
+  
   for (int i = 0; i < myLength; i++) {
     if (str.startsWith(temp, i)) {
       count++;
     }
   }
-
+  
   return count;
-
+  
 }
