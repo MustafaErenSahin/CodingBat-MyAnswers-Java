@@ -5,17 +5,15 @@ noTriples([1, 1, 2, 2, 2, 1]) → false
 noTriples([1, 1, 1, 2, 2, 2, 1]) → false
 
 public boolean noTriples(int[] nums) {
-
-  boolean output = true;
-
-  for (int i = 0; i < nums.length - 2; i++) {
+  
+  int myLength = nums.length - 2;
+  
+  for (int i = 0; i < myLength; i++) {
     int temp = nums[i];
-    if (nums[i + 1] == temp && nums[i + 2] == temp) {
-      output = false;
-      break;
-    }
+    
+    if (nums[i + 1] == temp && nums[i + 2] == temp) return false;
   }
-
-  return output;
-
+  
+  return true;
+  
 }
