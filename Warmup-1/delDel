@@ -6,9 +6,8 @@ delDel("adedbc") → "adedbc"
 
 public String delDel(String str) {
 
-  if (str.startsWith("del", 1)) {
-    return new StringBuilder(str).delete(1, 4).toString();
-  }
+  if (str.startsWith("del", 1)) return new StringBuilder(str).delete(1, 4)
+    .toString();
 
   return str;
   
