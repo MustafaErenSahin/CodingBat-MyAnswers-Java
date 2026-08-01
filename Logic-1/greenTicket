@@ -5,16 +5,13 @@ greenTicket(2, 2, 2) → 20
 greenTicket(1, 1, 2) → 10
 
 public int greenTicket(int a, int b, int c) {
-
-  int output = 0;
-
-  if (a == b && b == c) {
-    output = 20;
-  }
-  else if (a == b || b == c || a == c) {
-    output = 10;
-  }
-
-  return output;
-
+  
+  boolean ab = a == b;
+  boolean bc = b == c;
+  
+  if (ab && bc) return 20;
+  if (ab || bc || a == c) return 10;
+  
+  return 0;
+  
 }
