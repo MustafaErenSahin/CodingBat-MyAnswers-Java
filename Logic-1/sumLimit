@@ -5,13 +5,11 @@ sumLimit(8, 3) → 8
 sumLimit(8, 1) → 9
 
 public int sumLimit(int a, int b) {
-
-  int output = a + b;
-
-  if (String.valueOf(output).length() > String.valueOf(a).length()) {
-    output = a;
-  }
-
-  return output;
-
+  
+  int sum = a + b;
+  
+  if (String.valueOf(sum).length() > String.valueOf(a).length()) return a;
+  
+  return sum;
+  
 }
