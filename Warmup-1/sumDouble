@@ -5,13 +5,11 @@ sumDouble(3, 2) → 5
 sumDouble(2, 2) → 8
 
 public int sumDouble(int a, int b) {
-
-  int output = a + b;
-
-  if (a == b) {
-    output *= 2;
-  }
-
-  return output;
-
+  
+  int sum = a + b;
+  
+  if (a == b) return sum * 2;
+  
+  return sum;
+  
 }
