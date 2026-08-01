@@ -5,16 +5,10 @@ dateFashion(5, 2) → 0
 dateFashion(5, 5) → 1
 
 public int dateFashion(int you, int date) {
-
-  int result = 1;
-
-  if (you <= 2 || date <= 2) {
-    result = 0;
-  }
-  else if (you >= 8 || date >= 8) {
-    result = 2;
-  }
-
-  return result;
-
+  
+  if (you <= 2 || date <= 2) return 0;
+  if (you >= 8 || date >= 8) return 2;
+  
+  return 1;
+  
 }
