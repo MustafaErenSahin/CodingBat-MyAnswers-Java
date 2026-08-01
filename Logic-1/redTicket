@@ -5,19 +5,11 @@ redTicket(2, 2, 1) → 0
 redTicket(0, 0, 0) → 5
 
 public int redTicket(int a, int b, int c) {
-
-  int output = 0;
-
-  if (a == 2 && b == 2 && c == 2) {
-    output = 10;
-  }
-  else if (a == b && b == c) {
-    output = 5;
-  }
-  else if (b != a && c != a) {
-    output = 1;
-  }
-
-  return output;
-
+  
+  if (a == 2 && b == 2 && c == 2) return 10;
+  if (a == b && b == c) return 5;
+  if (b != a && c != a) return 1;
+  
+  return 0;
+  
 }
