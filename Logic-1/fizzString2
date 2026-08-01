@@ -5,19 +5,19 @@ fizzString2(2) → "2!"
 fizzString2(3) → "Fizz!"
 
 public String fizzString2(int n) {
-
-  StringBuilder output = new StringBuilder(Math.max(9, String.valueOf(n).length() + 1));
-
+  
+  String output = "";
+  
   if (n % 3 == 0) {
-    output.append("Fizz");
+    output += "Fizz";
   }
   if (n % 5 == 0) {
-    output.append("Buzz");
+    output += "Buzz";
   }
-  if (output.length() == 0) {
-    output.append(n);
+  if (output.isEmpty()) {
+    output += String.valueOf(n);
   }
-
-  return output.append("!").toString();
-
+  
+  return output + "!";
+  
 }
