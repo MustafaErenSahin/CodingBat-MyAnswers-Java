@@ -5,19 +5,18 @@ fizzString("dib") → "Buzz"
 fizzString("fib") → "FizzBuzz"
 
 public String fizzString(String str) {
-
-  StringBuilder output = new StringBuilder(Math.max(8, str.length()));
+  
+  String output = "";
 
   if (str.startsWith("f")) {
-    output.append("Fizz");
+    output += "Fizz";
   }
   if (str.endsWith("b")) {
-    output.append("Buzz");
+    output += "Buzz";
   }
-  if (output.length() == 0) {
-    output.append(str);
-  }
+  
+  if (output.isEmpty()) return str;
 
-  return output.toString();
-
+  return output;
+  
 }
