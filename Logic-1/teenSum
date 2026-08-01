@@ -5,13 +5,15 @@ teenSum(10, 13) → 19
 teenSum(13, 2) → 19
 
 public int teenSum(int a, int b) {
+  
+  if (checkTeen(a) || checkTeen(b)) return 19;
+  
+  return a + b;
+  
+}
 
-  int sum = a + b;
+private boolean checkTeen(int x) {
 
-  if (a >= 13 && a <= 19 || b >= 13 && b <= 19) {
-    sum = 19;
-  }
-
-  return sum;
-
+    return x >= 13 && x <= 19;
+    
 }
