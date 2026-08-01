@@ -5,17 +5,10 @@ blueTicket(9, 2, 0) → 0
 blueTicket(6, 1, 4) → 10
 
 public int blueTicket(int a, int b, int c) {
-
-  int output = 0;
-  int ab = a + b, bc = b + c, ac = a + c;
-
-  if (ab == 10 || bc == 10 || ac == 10) {
-    output = 10;
-  }
-  else if (a - c == 10 || b - c == 10) {
-    output = 5;
-  }
-
-  return output;
-
+  
+  if (a + b == 10 || b + c == 10 || a + c == 10) return 10;
+  if (a - c == 10 || b - c == 10) return 5;
+  
+  return 0;
+  
 }
