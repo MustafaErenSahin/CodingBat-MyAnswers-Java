@@ -6,7 +6,18 @@ in3050(40, 50) → true
 
 public boolean in3050(int a, int b) {
   
-  return a >= 30 && b >= 30 && a <= 40 && b <= 40 || a >= 40 && b >= 40 && 
-    a <= 50 && b <= 50;
+  return in3040(a) && in3040(b) || in4050(a) && in4050(b);
+  
+}
+
+private boolean in3040(int x) {
+  
+  return x >= 30 && x <= 40;
+  
+}
+
+private boolean in4050(int x) {
+  
+  return x >= 40 && x <= 50;
   
 }
