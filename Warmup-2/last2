@@ -8,12 +8,12 @@ public int last2(String str) {
   
   if (str.length() < 2) return 0;
   
-  int myLength = str.length() - 2;
-  String temp = str.substring(myLength);
+  int endIndex = str.length() - 2;
+  String tail = str.substring(endIndex);
   int count = 0;
   
-  for (int i = 0; i < myLength; i++) {
-    if (str.startsWith(temp, i)) {
+  for (int i = 0; i < endIndex; i++) {
+    if (str.startsWith(tail, i)) {
       count++;
     }
   }
