@@ -5,16 +5,9 @@ theEnd("Hello", false) → "o"
 theEnd("oh", true) → "o"
 
 public String theEnd(String str, boolean front) {
+  
+  if (front) return str.substring(0, 1);
 
-  String output;
-
-  if (front) {
-    output = String.valueOf(str.charAt(0));
-  }
-  else {
-    output = String.valueOf(str.charAt(str.length() - 1));
-  }
-
-  return output;
-
+  return str.substring(str.length() - 1);
+  
 }
