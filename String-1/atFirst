@@ -5,7 +5,14 @@ atFirst("hi") → "hi"
 atFirst("h") → "h@"
 
 public String atFirst(String str) {
-
-  return new StringBuilder(str).append("@@").substring(0, 2);
-
+  
+  switch (str.length()) {
+    case 0:
+      return "@@";
+    case 1:
+      return str + "@";
+    default:
+      return str.substring(0, 2);
+  }
+  
 }
