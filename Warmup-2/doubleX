@@ -5,9 +5,7 @@ doubleX("axaxax") → false
 doubleX("xxxxx") → true
 
 boolean doubleX(String str) {
-
-  int myIndex = str.indexOf('x');
-
-  return myIndex != -1 && str.startsWith("xx", myIndex);
-
+  
+  return str.startsWith("xx", str.indexOf('x'));
+  
 }
