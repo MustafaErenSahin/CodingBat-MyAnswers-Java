@@ -5,10 +5,9 @@ right2("java") → "vaja"
 right2("Hi") → "Hi"
 
 public String right2(String str) {
-
-  int myLength = str.length();
-
-  return new StringBuilder(myLength).append(str.substring(myLength - 2)).append
-         (str.substring(0, myLength - 2)).toString();
-
+  
+  int myIndex = str.length() - 2;
+  
+  return str.substring(myIndex) + str.substring(0, myIndex);
+  
 }
