@@ -5,14 +5,14 @@ comboString("hi", "Hello") → "hiHellohi"
 comboString("aaa", "b") → "baaab"
 
 public String comboString(String a, String b) {
-
+  
   if (a.length() > b.length()) {
     String temp = a;
+    
     a = b;
     b = temp;
   }
-
-  return new StringBuilder(2 * a.length() + b.length()).append(a).append(b).append(a)
-         .toString();
-
+  
+  return a + b + a;
+  
 }
