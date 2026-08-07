@@ -5,10 +5,18 @@ lastChars("yo", "java") → "ya"
 lastChars("hi", "") → "h@"
 
 public String lastChars(String a, String b) {
+  
+  a = checkChar(a);
+  b = checkChar(b);
+  
+  return a.substring(0, 1) + b.substring(b.length() - 1);
+  
+}
 
-  int myLength = a.length() + b.length() + 2;
-
-  return new StringBuilder(myLength).append(a).append('@').append('@')
-         .append(b).delete(1, myLength - 1).toString();
-
+private String checkChar(String x) {
+  
+  if (x.isEmpty()) return "@";
+  
+  return x;
+  
 }
