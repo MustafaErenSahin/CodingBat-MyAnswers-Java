@@ -10,7 +10,7 @@ public int stringMatch(String a, String b) {
   int count = 0;
   
   for (int i = 0; i < myLength; i++) {
-    if (a.charAt(i) == b.charAt(i) && a.charAt(i + 1) == b.charAt(i + 1)) {
+    if (a.regionMatches(i, b, i, 2)) {
       count++;
     }
   }
