@@ -5,8 +5,7 @@ helloName("Alice") → "Hello Alice!"
 helloName("X") → "Hello X!"
 
 public String helloName(String name) {
-
-  return new StringBuilder(name.length() + 7).append("Hello ").append(name).append('!')
-         .toString();
-
+  
+  return "Hello " + name + "!";
+  
 }
