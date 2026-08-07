@@ -8,13 +8,18 @@ public String stringX(String str) {
   
   if (str.length() <= 2) return str;
   
-  StringBuilder temp = new StringBuilder(str.length()- 2);
+  StringBuilder output = new StringBuilder(str.length());
   
-  temp.append(str, 1, str.length() - 1);
+  output.append(str.charAt(0));
   
-  return str.charAt(0) + temp.toString().replace("x", "")
-    + str.charAt(str.length() - 1);
-    
-  //return str.replaceAll("(?<=.)x(?=.)", "");
+  int lastIndex = str.length() - 1;
+
+  for (int i = 1; i < lastIndex; i++) {
+    if (str.charAt(i) != 'x') {
+      output.append(str.charAt(i));
+    }
+  }
+  
+  return output.append(str.charAt(lastIndex)).toString();
   
 }
