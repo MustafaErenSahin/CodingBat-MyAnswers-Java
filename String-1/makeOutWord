@@ -5,8 +5,7 @@ makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
 makeOutWord("[[]]", "word") → "[[word]]"
 
 public String makeOutWord(String out, String word) {
-
-  return new StringBuilder().append(out.substring(0, 2)).append(word).append
-         (out.substring(2)).toString();
-
+  
+  return new StringBuilder(out).insert(2, word).toString();
+  
 }
