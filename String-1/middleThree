@@ -5,9 +5,9 @@ middleThree("and") → "and"
 middleThree("solving") → "lvi"
 
 public String middleThree(String str) {
-
-  int halfLength = str.length() / 2;
-
-  return str.substring(halfLength - 1, halfLength + 2);
-
+  
+  int halfIndex = str.length() / 2;
+  
+  return str.substring(halfIndex - 1, halfIndex + 2);
+  
 }
