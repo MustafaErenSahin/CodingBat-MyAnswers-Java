@@ -5,9 +5,9 @@ middleTwo("code") → "od"
 middleTwo("Practice") → "ct"
 
 public String middleTwo(String str) {
-
-  int halfLength = str.length() / 2;
-
-  return str.substring(halfLength - 1, halfLength + 1);
-
+  
+  int halfIndex = str.length() / 2;
+  
+  return str.substring(halfIndex - 1, halfIndex + 1);
+  
 }
