@@ -5,11 +5,11 @@ minCat("Hello", "java") → "ellojava"
 minCat("java", "Hello") → "javaello"
 
 public String minCat(String a, String b) {
-
-  int aLength = a.length(), bLength = b.length();
+  
+  int aLength = a.length();
+  int bLength = b.length();
   int minLength = Math.min(aLength, bLength);
-
-  return new StringBuilder(2 * minLength).append(a.substring(aLength - minLength)).append
-         (b.substring(bLength - minLength)).toString();
-
+  
+  return a.substring(aLength - minLength) + b.substring(bLength - minLength);
+  
 }
