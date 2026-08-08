@@ -5,18 +5,12 @@ lastTwo("cat") → "cta"
 lastTwo("ab") → "ba"
 
 public String lastTwo(String str) {
-
+  
   int myLength = str.length();
-  StringBuilder output = new StringBuilder();
-
-  if (myLength >= 2) {
-    output.append(str.substring(0, myLength - 2)).append(str.charAt(myLength - 1))
-    .append(str.charAt(myLength - 2));
-  }
-  else {
-    output.append(str);
-  }
-
-  return output.toString();
-
+  
+  if (myLength < 2) return str;
+  
+  return str.substring(0, myLength - 2) + str.charAt(myLength - 1) 
+    + str.charAt(myLength - 2);
+  
 }
