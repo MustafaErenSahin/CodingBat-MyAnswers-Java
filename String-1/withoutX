@@ -5,17 +5,17 @@ withoutX("xHi") → "Hi"
 withoutX("Hxix") → "Hxi"
 
 public String withoutX(String str) {
-
+  
   int myLength = str.length();
   StringBuilder output = new StringBuilder(str);
-
+  
+  if (myLength > 1 && str.charAt(myLength - 1) == 'x') {
+    output.deleteCharAt(myLength - 1);
+  }
   if (myLength > 0 && str.charAt(0) == 'x') {
     output.deleteCharAt(0);
   }
-  if (myLength > 1 && str.charAt(myLength - 1) == 'x') {
-    output.deleteCharAt(output.length() - 1);
-  }
 
   return output.toString();
-
+  
 }
