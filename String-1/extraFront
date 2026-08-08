@@ -5,10 +5,9 @@ extraFront("ab") → "ababab"
 extraFront("H") → "HHH"
 
 public String extraFront(String str) {
-
+  
   String firstTwo = str.substring(0, Math.min(2, str.length()));
-
-  return new StringBuilder(6).append(firstTwo).append(firstTwo).append(firstTwo)
-         .toString();
-
+  
+  return firstTwo + firstTwo + firstTwo;
+  
 }
