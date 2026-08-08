@@ -4,17 +4,21 @@ deFront("Hello") → "llo"
 deFront("java") → "va"
 deFront("away") → "aay"
 
-public String deFront(String str) {
-
-  StringBuilder output = new StringBuilder(str.length());
-
-  if (str.length() > 0 && str.charAt(0) == 'a') {
-    output.append('a');
+public String deFront(String str) {    
+  
+  String output = "";
+  int myLength = str.length();
+  
+  if (myLength >= 1 && str.charAt(0) == 'a') {
+    output += "a";
   }
-  if (str.length() > 1 && str.charAt(1) == 'b') {
-    output.append('b');
+  if (myLength >= 2 && str.charAt(1) == 'b') {
+    output += "b";
   }
-
-  return output.append(str.substring(2)).toString();
-
+  if (myLength > 2) {
+    output += str.substring(2);
+  }
+  
+  return output;
+  
 }
