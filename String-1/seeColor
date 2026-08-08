@@ -5,16 +5,10 @@ seeColor("xxred") → ""
 seeColor("blueTimes") → "blue"
 
 public String seeColor(String str) {
-
-  String output = "";
-
-  if (str.startsWith("red")) {
-    output = "red";
-  }
-  else if (str.startsWith("blue")) {
-    output = "blue";
-  }
-
-  return output;
-
+  
+  if (str.startsWith("red")) return "red";
+  if (str.startsWith("blue")) return "blue";
+  
+  return "";
+  
 }
