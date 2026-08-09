@@ -5,20 +5,21 @@ loneSum(3, 2, 3) → 2
 loneSum(3, 3, 3) → 0
 
 public int loneSum(int a, int b, int c) {
-
+  
   int sum = 0;
-  int[] helper = new int[] {0, a, b, c, 0 };
-
-  Arrays.sort(helper, 1, 4);
-
-  for (int i = 1; i < 4; i++) {
-    int current = helper[i];
-    if (current == helper[i + 1] || current == helper[i - 1]) {
-      continue;
-    }
-    sum += current;
-  }
-
+  
+  sum += increaseSum(a, b, c);
+  sum += increaseSum(b, a, c);
+  sum += increaseSum(c, a, b);
+  
   return sum;
+  
+}
 
+private int increaseSum(int x, int y, int z) {
+  
+  if (x != y && x != z) return x;
+  
+  return 0;
+  
 }
