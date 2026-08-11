@@ -5,17 +5,18 @@ luckySum(1, 2, 13) → 3
 luckySum(1, 13, 3) → 1
 
 public int luckySum(int a, int b, int c) {
-
+  
   int sum = 0;
   int[] helper = new int[] {a, b, c};
-
+  
   for (int i : helper) {
     if (i == 13) {
       break;
     }
+    
     sum += i;
   }
-
+  
   return sum;
-
+  
 }
