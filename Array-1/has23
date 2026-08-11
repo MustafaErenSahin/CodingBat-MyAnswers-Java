@@ -5,7 +5,13 @@ has23([4, 3]) → true
 has23([4, 5]) → false
 
 public boolean has23(int[] nums) {
+  
+  return check2Or3(nums[0]) || check2Or3(nums[1]);
+  
+}
 
-  return nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3;
-
+private boolean check2Or3(int x) {
+  
+  return x == 2 || x == 3;
+  
 }
