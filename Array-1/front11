@@ -5,17 +5,15 @@ front11([1], [2]) → [1, 2]
 front11([1, 7], []) → [1]
 
 public int[] front11(int[] a, int[] b) {
-
-  int aLength = a.length, bLength = b.length, i = 0;
-  int[] output = new int[Math.min(1, aLength) + Math.min(1, bLength)];
-
-  if (aLength > 0) {
-    output[i++] = a[0];
-  }
+  
+  int aCappedLength = Math.min(1, a.length);
+  int bLength = b.length;
+  int[] output = Arrays.copyOf(a, aCappedLength + Math.min(1, bLength));
+  
   if (bLength > 0) {
-    output[i] = b[0];
+    output[aCappedLength] = b[0];
   }
-
+  
   return output;
-
+  
 }
