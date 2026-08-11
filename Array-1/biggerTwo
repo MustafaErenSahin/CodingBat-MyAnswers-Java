@@ -5,16 +5,15 @@ biggerTwo([3, 4], [1, 2]) → [3, 4]
 biggerTwo([1, 1], [1, 2]) → [1, 2]
 
 public int[] biggerTwo(int[] a, int[] b) {
+  
+  if (arraySum(b) > arraySum(a)) return b;
+  
+  return a;
+  
+}
 
-  int[] output;
-
-  if (b[0] + b[1] > a[0] + a[1]) {
-    output = b;
-  }
-  else {
-    output = a;
-  }
-
-  return output;
-
+private int arraySum(int[] arr) {
+  
+  return arr[0] + arr[1];
+  
 }
