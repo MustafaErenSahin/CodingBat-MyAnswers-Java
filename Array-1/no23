@@ -5,7 +5,13 @@ no23([4, 2]) → false
 no23([3, 5]) → false
 
 public boolean no23(int[] nums) {
+  
+  return checkNot2Or3(nums[0]) && checkNot2Or3(nums[1]);
+  
+}
 
-  return nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3;
-
+private boolean checkNot2Or3(int x) {
+  
+  return x != 2 && x != 3;
+  
 }
