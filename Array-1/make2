@@ -5,19 +5,14 @@ make2([4], [1, 2, 3]) → [4, 1]
 make2([], [1, 2]) → [1, 2]
 
 public int[] make2(int[] a, int[] b) {
-
+  
   int aLength =  a.length;
-  int[] output = new int[2];
+  int[] output = Arrays.copyOf(a, 2);
 
-  for (int i = 0; i < 2; i++) {
-    if (aLength > i) {
-      output[i] = a[i];
-    }
-    else {
-      output[i] = b[i - aLength];
-    }
+  for (int i = aLength; i < 2; i++) {
+    output[i] = b[i - aLength];
   }
-
+  
   return output;
-
+  
 }
