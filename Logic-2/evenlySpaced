@@ -5,11 +5,11 @@ evenlySpaced(4, 6, 2) → true
 evenlySpaced(4, 6, 3) → false
 
 public boolean evenlySpaced(int a, int b, int c) {
-
+  
   int[] temp = new int[] {a, b, c};
-
+  
   Arrays.sort(temp);
-
-  return temp[2] + temp[0] - 2 * temp[1] == 0;
-
+  
+  return temp[1] - temp[0] == temp[2] - temp[1];
+  
 }
