@@ -5,13 +5,11 @@ makeChocolate(4, 1, 10) → -1
 makeChocolate(4, 1, 7) → 2
 
 public int makeChocolate(int small, int big, int goal) {
-
-  int output = goal - Math.min(big, goal / 5) * 5;
-
-  if (output > small) {
-    output = -1;
-  }
-
-  return output;
-
+  
+  int neededSmall = goal - Math.min(big, goal / 5) * 5;
+  
+  if (neededSmall > small) return -1;
+  
+  return neededSmall;
+  
 }
