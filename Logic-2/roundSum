@@ -5,20 +5,13 @@ roundSum(12, 13, 14) → 30
 roundSum(6, 4, 4) → 10
 
 public int roundSum(int a, int b, int c) {
-
+  
   return round10(a) + round10(b) + round10(c);
-
+  
 }
 
 public int round10(int num) {
-
-  int mod = num % 10;
-  int output = num - mod;
-
-  if (mod >= 5) {
-    output += 10;
-  }
-
-  return output;
-
+  
+  return (num + 5) / 10 * 10;
+  
 }
