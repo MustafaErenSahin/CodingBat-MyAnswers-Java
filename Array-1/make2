@@ -6,7 +6,7 @@ make2([], [1, 2]) → [1, 2]
 
 public int[] make2(int[] a, int[] b) {
   
-  int aLength =  a.length;
+  int aLength = a.length;
   int[] output = Arrays.copyOf(a, 2);
 
   for (int i = aLength; i < 2; i++) {
