@@ -5,15 +5,13 @@ doubleChar("AAbb") → "AAAAbbbb"
 doubleChar("Hi-There") → "HHii--TThheerree"
 
 public String doubleChar(String str) {
-
-  int myLength = str.length();
-  StringBuilder output = new StringBuilder(2 * myLength);
-
-  for (int i = 0; i < myLength; i++) {
-    char myChar = str.charAt(i);
-    output.append(myChar).append(myChar);
+  
+  StringBuilder output = new StringBuilder(str);
+  
+  for (int i = 0; i < output.length(); i += 2) {
+    output.insert(i, output.charAt(i));
   }
-
+  
   return output.toString();
-
+  
 }
