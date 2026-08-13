@@ -5,8 +5,7 @@ makeTags("i", "Hello") → "<i>Hello</i>"
 makeTags("cite", "Yay") → "<cite>Yay</cite>"
 
 public String makeTags(String tag, String word) {
-
-  return new StringBuilder(2 * tag.length() + word.length() + 5).append('<').append(tag)
-         .append('>').append(word).append("</").append(tag).append('>').toString();
-
+  
+  return "<" + tag + ">" + word + "</" + tag + ">";
+  
 }
