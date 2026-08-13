@@ -5,17 +5,7 @@ prefixAgain("abXYabc", 2) → true
 prefixAgain("abXYabc", 3) → false
 
 public boolean prefixAgain(String str, int n) {
-
-  String temp = str.substring(0, n);
-  boolean output = false;
-
-  for (int i = n; i < str.length(); i++) {
-    if (str.startsWith(temp, i)) {
-      output = true;
-      break;
-    }
-  }
-
-  return output;
-
+  
+  return str.indexOf(str.substring(0, n), n) != -1;
+  
 }
