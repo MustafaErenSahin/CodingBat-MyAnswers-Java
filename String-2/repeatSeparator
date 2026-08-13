@@ -8,13 +8,12 @@ public String repeatSeparator(String word, String sep, int count) {
   
   if (count == 0) return "";
   
-  StringBuilder output = new StringBuilder(count * word.length() + (count - 1) 
-    * sep.length());
+  StringBuilder output = new StringBuilder(word);
   
   for (int i = count - 1; i > 0; i--) {
-    output.append(word).append(sep);
+    output.append(sep).append(word);
   }
   
-  return output.append(word).toString();
+  return output.toString();
   
 }
